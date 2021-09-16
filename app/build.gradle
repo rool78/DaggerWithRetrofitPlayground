@@ -33,7 +33,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    //View binding
+    buildFeatures {
+        viewBinding = true
+    }
 }
+
 
 dependencies {
     implementation 'androidx.core:core-ktx:1.6.0'
@@ -43,6 +49,15 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //ViewModel
+    implementation group: 'androidx.lifecycle', name: 'lifecycle-viewmodel-ktx', version: '2.3.1'
+    //LiveData
+    implementation group: 'androidx.lifecycle', name: 'lifecycle-livedata-ktx', version: '2.3.1'
+    // Fragment
+    implementation "androidx.fragment:fragment-ktx:1.3.2"
+    // Activity
+    implementation "androidx.activity:activity-ktx:1.2.2"
 
     //Dagger hilt
     implementation 'com.google.dagger:hilt-android:2.38.1'

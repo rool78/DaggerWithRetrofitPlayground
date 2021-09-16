@@ -1,6 +1,6 @@
 package com.example.daggerwithretrofitplaygroud.model
 
-class Post(
+data class Post(
     private var id:Int,
     private var userId:Int,
     private var title:String,
