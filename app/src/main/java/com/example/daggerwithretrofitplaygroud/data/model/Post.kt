@@ -1,4 +1,4 @@
-package com.example.daggerwithretrofitplaygroud.model
+package com.example.daggerwithretrofitplaygroud.data.model
 
 data class Post(
     private var id:Int,
