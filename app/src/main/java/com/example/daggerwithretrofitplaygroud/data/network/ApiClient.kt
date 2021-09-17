@@ -11,7 +11,7 @@ import retrofit2.http.Path
 interface ApiClient {
 
     @GET("posts/")
-    fun getAllPosts(): Response<List<Post>>
+    suspend fun getAllPosts(): Response<List<Post>>
 
 //    @GET("posts/{id}")
 //    fun getPostById(@Path("id") id: Int): Call<Post>

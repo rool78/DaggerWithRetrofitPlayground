@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.tvMainLabel.setOnClickListener {
             println("???? onClick tv")
-            mainViewModel.onCreate()
+            mainViewModel.getPosts()
         }
         getPosts()
 
