@@ -24,6 +24,7 @@
         android:textSize="20sp"
         android:textStyle="italic"
         android:layout_margin="10dp"
+        android:justificationMode="inter_word"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

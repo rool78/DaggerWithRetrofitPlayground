@@ -15,9 +15,6 @@ import javax.inject.Singleton
 class AppModule {
 
     @Provides
-    fun testStringProvider() = "This is a string provided by dagger"
-
-    @Provides
     @Singleton
     fun provideRetrofit() : Retrofit =
     Retrofit.Builder()

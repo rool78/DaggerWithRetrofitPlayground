@@ -4,21 +4,21 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.daggerwithretrofitplaygroud.data.model.Philosopher
-import com.example.daggerwithretrofitplaygroud.domain.GetPhilosophersUseCase
+import com.example.daggerwithretrofitplaygroud.domain.GetRandomPhilosopherUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val getPhilosophersUseCase: GetPhilosophersUseCase) : ViewModel() {
+    private val getRandomPhilosopherUseCase: GetRandomPhilosopherUseCase) : ViewModel() {
 
-    val philosophersModel = MutableLiveData<List<Philosopher>>()
-//    var getPostsUseCase = GetPostsUseCase()
+    //    var getPostsUseCase = GetPostsUseCase()
+    val philosophersModel = MutableLiveData<Philosopher>()
 
-    fun getPosts() {
+    fun getRandomPhilosopher() {
       viewModelScope.launch {
-          val result = getPhilosophersUseCase()
+          val result = getRandomPhilosopherUseCase()
           philosophersModel.postValue(result)
       }
     }

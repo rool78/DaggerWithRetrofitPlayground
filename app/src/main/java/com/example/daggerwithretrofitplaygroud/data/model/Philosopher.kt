@@ -1,9 +1,9 @@
 package com.example.daggerwithretrofitplaygroud.data.model
 
 data class Philosopher(
-    private var id:Int,
-    private var name:String,
-    private var quote:String
+    val id:Int,
+    val name:String,
+    val quote:String
 ) {
 
     override fun toString(): String {

@@ -9,6 +9,4 @@ interface ApiClient {
     @GET("philosophers/")
     suspend fun getAllPhilosophers(): Response<List<Philosopher>>
 
-//    @GET("posts/{id}")
-//    fun getPostById(@Path("id") id: Int): Call<Post>
 }
