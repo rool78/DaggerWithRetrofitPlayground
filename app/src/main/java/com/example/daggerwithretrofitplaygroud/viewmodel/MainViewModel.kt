@@ -3,22 +3,23 @@ package com.example.daggerwithretrofitplaygroud.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.daggerwithretrofitplaygroud.data.model.Post
-import com.example.daggerwithretrofitplaygroud.domain.GetPostsUseCase
+import com.example.daggerwithretrofitplaygroud.data.model.Philosopher
+import com.example.daggerwithretrofitplaygroud.domain.GetPhilosophersUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(private val getPostsUseCase: GetPostsUseCase) : ViewModel() {
+class MainViewModel @Inject constructor(
+    private val getPhilosophersUseCase: GetPhilosophersUseCase) : ViewModel() {
 
-    val postsModel = MutableLiveData<List<Post>>()
+    val philosophersModel = MutableLiveData<List<Philosopher>>()
 //    var getPostsUseCase = GetPostsUseCase()
 
     fun getPosts() {
       viewModelScope.launch {
-          val result = getPostsUseCase()
-          postsModel.postValue(result)
+          val result = getPhilosophersUseCase()
+          philosophersModel.postValue(result)
       }
     }
 

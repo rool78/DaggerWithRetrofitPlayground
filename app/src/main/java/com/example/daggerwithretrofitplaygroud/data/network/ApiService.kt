@@ -1,10 +1,9 @@
 package com.example.daggerwithretrofitplaygroud.data.network
 
-import com.example.daggerwithretrofitplaygroud.data.model.Post
+import com.example.daggerwithretrofitplaygroud.data.model.Philosopher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Response
-import retrofit2.Retrofit
 import javax.inject.Inject
 
 class ApiService @Inject constructor(private val apiClient: ApiClient){
@@ -12,10 +11,10 @@ class ApiService @Inject constructor(private val apiClient: ApiClient){
 //     var retrofit : Retrofit
 
     //Calling api with coroutine
-    suspend fun getPosts() : List<Post> {
+    suspend fun getPosts() : List<Philosopher> {
         return withContext(Dispatchers.IO) {
-            val response: Response<List<Post>> =
-                /*retrofit.create(ApiClient::class.java)*/apiClient.getAllPosts()
+            val response: Response<List<Philosopher>> =
+                /*retrofit.create(ApiClient::class.java)*/apiClient.getAllPhilosophers()
             response.body() ?: emptyList()
         }
     }

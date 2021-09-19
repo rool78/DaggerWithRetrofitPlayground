@@ -17,7 +17,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField 'String', 'BASE_URL', "\"https://jsonplaceholder.typicode.com/\""
+        buildConfigField 'String', 'API_BASE_URL', "\"https://6145d02538339400175fc70c.mockapi.io/api/v1/\""
     }
 
     buildTypes {

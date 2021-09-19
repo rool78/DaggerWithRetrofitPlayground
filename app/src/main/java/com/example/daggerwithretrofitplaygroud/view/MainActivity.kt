@@ -24,24 +24,20 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mainViewModel.postsModel.observe(this, Observer { posts ->
-            println("???? post model obsesrver")
-            for (post in posts) {
-                println("???? post -> $post")
+        mainViewModel.philosophersModel.observe(this, Observer { philosophers ->
+            for (philosopher in philosophers) {
+                println("???? philosopher -> $philosopher")
             }
         })
 
-        binding.tvMainLabel.setOnClickListener {
-            println("???? onClick tv")
+        binding.btCheckItOut.setOnClickListener() {
             mainViewModel.getPosts()
         }
         getPosts()
 
-
-
     }
 
-    fun getPosts() {
+    private fun getPosts() {
         println("???? Hello? -> $mDaggerStringTest")
     }
 }
