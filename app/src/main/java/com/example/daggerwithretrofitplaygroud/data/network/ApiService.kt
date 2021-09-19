@@ -8,8 +8,6 @@ import javax.inject.Inject
 
 class ApiService @Inject constructor(private val apiClient: ApiClient){
 
-//     var retrofit : Retrofit
-
     //Calling api with coroutine
     suspend fun getPosts() : List<Philosopher> {
         return withContext(Dispatchers.IO) {

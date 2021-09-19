@@ -2,6 +2,7 @@ package com.example.daggerwithretrofitplaygroud.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.example.daggerwithretrofitplaygroud.data.model.Philosopher
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         mainViewModel.philosophersModel.observe(this, Observer { philosopher ->
+            Log.d("????", "viewModel value observed -> $philosopher")
             binding.tvPhilosopher.text = philosopher.name
             binding.tvQuote.text = philosopher.quote
         })
