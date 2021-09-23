@@ -4,6 +4,7 @@ import android.util.Log
 import com.example.daggerwithretrofitplaygroud.data.ApiRepository
 import com.example.daggerwithretrofitplaygroud.data.PhilosophersProvider
 import com.example.daggerwithretrofitplaygroud.data.model.Philosopher
+import com.example.daggerwithretrofitplaygroud.data.room.PhilosopherDatabase
 import javax.inject.Inject
 
 class GetRandomPhilosopherUseCase @Inject constructor(

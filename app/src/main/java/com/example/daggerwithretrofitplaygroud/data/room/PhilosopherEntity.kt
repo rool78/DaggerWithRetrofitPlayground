@@ -7,10 +7,10 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "philosophers_table")
 data class PhilosopherEntity(
     @PrimaryKey(autoGenerate = true)
-    val uid: Int,
+    var uid: Int = 0,
     @ColumnInfo(name = "name")
-    val name: String,
+    var name: String = "",
     @ColumnInfo(name = "quote")
-    val quote: String
+    var quote: String = ""
 )
 
