@@ -5,13 +5,13 @@ import androidx.room.*
 @Dao
 interface PhilosopherDao {
     @Query("SELECT * FROM philosophers_table")
-    fun getAll(): List<PhilosopherEntity>
+    suspend fun getAll(): List<PhilosopherEntity>
 
     @Query("SELECT * FROM philosophers_table WHERE uid IN (:philosopherEntityIds)")
     fun loadAllByIds(philosopherEntityIds: IntArray): List<PhilosopherEntity>
 
     @Insert
-    fun insert(philosopherEntity: PhilosopherEntity)
+    suspend fun insert(philosopherEntity: PhilosopherEntity)
 
     @Insert
     fun insertAll(philosophers: List<PhilosopherEntity>)
