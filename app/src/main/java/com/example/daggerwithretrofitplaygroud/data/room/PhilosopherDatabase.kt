@@ -4,8 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.daggerwithretrofitplaygroud.data.model.Philosopher
 
-@Database(entities = [PhilosopherEntity::class], version = 1, exportSchema = false)
+@Database(entities = [Philosopher::class], version = 1, exportSchema = false)
 abstract class PhilosopherDatabase : RoomDatabase() {
 
     abstract val philosopherDao: PhilosopherDao

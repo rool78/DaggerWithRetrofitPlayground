@@ -12,7 +12,7 @@ class GetRandomPhilosopherUseCase @Inject constructor(
 
     suspend operator fun invoke() : Philosopher {
         Log.d("????", "Quick room test")
-        val roomData = repository.getAllPhilosophersFromRoom()
+        val roomData = repository.getAllPhilosophersFromDatabase()
         Log.d("????", "Room data-> $roomData")
 
         if (philosophersProvider.philosophers.isEmpty()) {
